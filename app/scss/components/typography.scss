@@ -1,0 +1,118 @@
+@use '../util' as *;
+
+.text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-1 {
+    font-size: rem(54);
+    font-weight: 700;
+    line-height: 1.95;
+    color: var(--dark-text2);
+}
+
+body.light {
+    .text-1 {
+        color: var(--light-text2);
+    }
+}
+
+.text-2 {
+    font-size: rem(32);
+    font-weight: 700;
+    color: var(--dark-text2);
+    line-height: 1;
+}
+
+body.light {
+    .text-2 {
+        color: var(--light-text2);
+    }
+}
+
+.text-3 {
+    font-size: rem(28);
+    font-weight: 700;
+    color: var(--dark-text2);
+
+    @include breakpoint(medium) {
+        font-size: rem(24);
+    }
+}
+
+body.light {
+    .text-3 {
+        color: var(--light-text2);
+    }
+}
+
+.text-4 {
+    font-size: rem(24.5);
+    font-weight: 700;
+    color: var(--dark-text2);
+}
+
+body.light {
+    .text-4 {
+        color: var(--light-text2);
+    }
+}
+
+.text-5 {
+    font-size: rem(14.25);
+    font-weight: 700;
+    color: var(--dark-text1);
+}
+
+body.light {
+    .text-5 {
+        color: var(--light-text1);
+    }
+}
+
+.text-6 {
+    font-size: rem(12.25);
+    font-weight: 700;
+    color: var(--dark-text1);
+}
+
+body.light {
+    .text-6 {
+        color: var(--light-text1);
+    }
+}
+
+.text-7 {
+    font-size: rem(12);
+    font-weight: 400;
+    color: var(--dark-text1);
+    letter-spacing: rem(5);
+    text-transform: uppercase;
+}
+
+body.light {
+    .text-7 {
+        color: var(--light-text1);
+    }
+}
+
+.positive-change {
+    font-size: rem(12);
+    color: var(--lime-green);
+    font-weight: 700;
+
+    &:before {
+        content: "⏶ ";
+    }
+}
+
+.negative-change {
+    font-size: rem(12);
+    color: var(--bright-red);
+    font-weight: 700;
+
+    &:before {
+        content: "⏷ ";
+    }
+}

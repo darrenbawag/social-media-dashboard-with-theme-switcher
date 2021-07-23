@@ -1,0 +1,38 @@
+@use '../util' as *;
+
+.container {
+    padding: rem(15) rem(25);
+    width: 100%;
+    max-width: 1162px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.top-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(240);
+    background-color: var(--dark-top-bg);
+    z-index: 1;
+    border-bottom-left-radius: rem(20);
+    border-bottom-right-radius: rem(20);
+    transition: .3s;
+}
+
+body.light {
+    .top-background {
+        background-color: var(--light-top-bg);
+    }
+}
+
+.top {
+    position: relative;
+}
+
+.bottom {
+    margin-top: rem(45);
+}

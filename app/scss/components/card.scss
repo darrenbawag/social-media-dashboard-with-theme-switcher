@@ -1,0 +1,143 @@
+@use '../util' as *;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    column-gap: rem(28);
+    row-gap: rem(24);
+    margin-top: rem(25);
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr;
+        row-gap: rem(25);
+    }
+}
+
+.top {
+    &__card {
+        width: 100%;
+        height: auto;
+        padding: rem(32) rem(27) rem(23);
+        text-align: center;
+        position: relative;
+        background-color: var(--dark-card);
+        border-radius: rem(7);
+        overflow: hidden;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover, &:active {
+            background-color: #333A56;
+        }
+
+        &-facebook {
+            &:before {
+                content: "";
+                width: 100%;
+                height: rem(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--facebook);
+            }
+        }
+
+        &-twitter {
+            &:before {
+                content: "";
+                width: 100%;
+                height: rem(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--twitter);
+            }
+        }
+
+        &-instagram {
+            &:before {
+                content: "";
+                width: 100%;
+                height: rem(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: linear-gradient(90deg, var(--instagram-start) 0%, var(--instagram-end) 100%);
+            }
+        }
+
+        &-youtube {
+            &:before {
+                content: "";
+                width: 100%;
+                height: rem(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--youtube);
+            }
+        }
+
+        &-user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-logo {
+            margin-right: rem(7);
+        }
+
+        &-followers {
+            &-text {
+                margin-top: -(rem(20));
+                margin-bottom: rem(25);
+            }
+        }
+    }
+}
+
+.bottom {
+    &__card {
+        padding: rem(25) rem(32) rem(25) rem(25);
+        background-color: var(--dark-card);
+        border-radius: rem(7);
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover, &:active {
+            background-color: #333A56;
+        }
+
+        &-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: rem(23);
+        }
+
+        &-numbers {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+}
+
+body.light {
+    .top__card {
+        background-color: var(--light-card);
+
+        &:hover, &:active {
+            background-color: #E1E3F0;
+        }
+    }
+
+    .bottom__card {
+        background-color: var(--light-card);
+
+        &:hover, &:active {
+            background-color: #E1E3F0;
+        }
+    }
+}

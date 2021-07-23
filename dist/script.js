@@ -1,0 +1,2 @@
+"use strict";var body=document.querySelector("body"),darkMode=document.querySelector("#dark-mode");darkMode.addEventListener("click",(function(){body.classList.toggle("light")}));
+//# sourceMappingURL=script.js.map
