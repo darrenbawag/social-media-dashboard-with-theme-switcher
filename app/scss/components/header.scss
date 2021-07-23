@@ -71,7 +71,10 @@
 
         &-slider {
             position: absolute;
-            inset: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background-image: linear-gradient(90deg, var(--toggle-bg-start) 0%, var(--toggle-bg-end) 100%);
             border-radius: rem(50);
             transition: .4s;
