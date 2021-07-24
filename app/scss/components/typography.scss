@@ -103,7 +103,15 @@ body.light {
     font-weight: 700;
 
     &:before {
-        content: "⏶ ";
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid var(--lime-green);
+        transform: translateY(-(rem(3)));
+        display: inline-block;
+        margin-right: rem(5);
     }
 }
 
@@ -113,6 +121,14 @@ body.light {
     font-weight: 700;
 
     &:before {
-        content: "⏷ ";
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid var(--bright-red);
+        transform: translateY(-(rem(2)));
+        display: inline-block;
+        margin-right: rem(5);
     }
 }
